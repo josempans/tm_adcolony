@@ -18,20 +18,28 @@ Only interstitials are supported. However, I'm planning to add video rewards.
 
 ### Using AdColony
 1. Setup and initialize the singleton ("TMAdColony"):
-    ```python
+
+    ```
     var adcolony = Global.has_singleton("TMAdColony")
     adcolony.setup("appid", "zoneid")
     ```
+    
 2. Request interstitial:
-    ```python
+
+    ```
     adcolony.request_interstitial()
     ```
+    
 3. Launch the video:
-    ```python
+
+    ```
     adcolony.launch_interstitial()
     ```
+    
 4. Optionally you can catch the event for the ad finished:
-    ```python
+
+    ```
     adcolony.connect("video_ad_finished", self, "on_ad_finished")
     ```
+    
 5. And that's it!
